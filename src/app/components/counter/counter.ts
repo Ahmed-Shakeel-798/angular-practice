@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 
 @Component({
   selector: 'app-counter',
@@ -9,4 +9,12 @@ import { Component, input } from '@angular/core';
 export class Counter {
   count = input<number>(); // Signal input
   message = input<string>();
+
+  keyPress = signal('');
+
+  onInput(event: Event) {
+    const value = (event.target as HTMLInputElement).value;
+
+    this.keyPress.set(value);
+}
 }

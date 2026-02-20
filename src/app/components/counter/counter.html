@@ -1,2 +1,5 @@
 <p>{{ message() }}</p>
 <p>Count from parent: {{ count() }}</p>
+<p>Typed {{ keyPress() }}</p>
+<!-- <input type="text" (keyup)="KeyUpHandler($event)"> -->
+ <input (input)="onInput($event)" />
