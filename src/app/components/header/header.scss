@@ -1,0 +1,26 @@
+header {
+  nav {
+    display: flex;
+    justify-content: space-between; // pushes left and right apart
+    align-items: center;            // vertical alignment
+    padding: 0 10px;                // 10px left and right spacing
+    height: 50px;                   // optional, for consistent header height
+
+    span:first-child {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    span:last-child {
+      a {
+        text-decoration: none;
+        color: inherit;
+        margin-left: 5px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
