@@ -1,5 +1,7 @@
-<p>{{ message() }}</p>
-<p>Count from parent: {{ count() }}</p>
-<p>Typed {{ keyPress() }}</p>
-<!-- <input type="text" (keyup)="KeyUpHandler($event)"> -->
- <input (input)="onInput($event)" />
+<p>Counter Value: {{ counterValue() }}</p>
+
+<div>
+    <button (click)="increment()" >Increment</button>
+    <button (click)="decrement()">Decrement</button>
+    <button (click)="reset()">Reset</button>
+</div>

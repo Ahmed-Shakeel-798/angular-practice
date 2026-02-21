@@ -7,14 +7,17 @@ import { Component, input, signal } from '@angular/core';
   styleUrl: './counter.scss',
 })
 export class Counter {
-  count = input<number>(); // Signal input
-  message = input<string>();
+  counterValue = signal(0);
 
-  keyPress = signal('');
+  increment() {
+    this.counterValue.update(value => value + 1);
+  }
 
-  onInput(event: Event) {
-    const value = (event.target as HTMLInputElement).value;
+  decrement() {
+    this.counterValue.update(value => value > 0 ? value - 1 : value);
+  }
 
-    this.keyPress.set(value);
-}
+  reset() {
+    this.counterValue.set(0);
+  }
 }
