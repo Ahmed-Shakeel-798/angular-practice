@@ -1,3 +1,25 @@
-<h2>Todos List!</h2>
-<p>{{ todoItems()[0].title }} | {{ todoItems()[0].completed }}</p>
-<p>{{ todoItems()[1].title }} | {{ todoItems()[1].completed }}</p>
+<h2>Todo List</h2>
+
+<div class="todo-container">
+
+  <div class="todo-header">
+    <div class="col-checkbox"></div>
+    <div class="col-title">Title</div>
+  </div>
+
+  @for (todo of todoItems(); track todo.id) {
+    <div class="todo-row">
+      <div class="col-checkbox">
+        <input
+          type="checkbox"
+          [checked]="todo.completed"
+        />
+      </div>
+
+      <div class="col-title">
+        {{ todo.title }}
+      </div>
+    </div>
+  }
+
+</div>
