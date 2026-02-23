@@ -12,7 +12,7 @@
   </div>
 
   @for (todo of todoItems(); track todo.id) {
-    <app-todo-item [todo_item]="todo"/>
+    <app-todo-item (todoToggled)="updateTodoItem($event)" [todo_item]="todo"/>
   }
 
 </div>

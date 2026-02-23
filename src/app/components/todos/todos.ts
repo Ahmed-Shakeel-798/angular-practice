@@ -25,4 +25,18 @@ export class TodosComponent implements OnInit {
         }
       )
   }
+
+  updateTodoItem(todo_item: Todo) {
+    this.todoItems.update((todos: Todo[]) => {
+      return todos.map(todo => {
+        if(todo.id == todo_item.id) {
+          return {
+            ...todo,
+            completed: !todo.completed
+          }
+        }
+        return todo;
+      });
+    })
+  }
 }

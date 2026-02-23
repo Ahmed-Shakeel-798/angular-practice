@@ -6,6 +6,7 @@
         <input
           type="checkbox"
           [checked]="todo_item().completed"
+          (change)="this.todoClicked()"
         />
     </div>
 

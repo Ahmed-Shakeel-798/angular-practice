@@ -16,5 +16,4 @@ export class HighlightCompletedTodo {
       this.el.nativeElement.style.backgroundColor = '';
     }
   }
-
 }
