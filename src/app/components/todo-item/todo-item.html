@@ -1,0 +1,12 @@
+<div class="todo-row">
+      <div class="col-checkbox">
+        <input
+          type="checkbox"
+          [checked]="todo_item().completed"
+        />
+      </div>
+
+      <div class="col-title">
+        {{ todo_item().title }}
+      </div>
+</div>

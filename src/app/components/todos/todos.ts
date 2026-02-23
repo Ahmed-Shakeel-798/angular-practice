@@ -2,10 +2,11 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { TodosService } from '../../services/todos';
 import { Todo } from '../../model/todo.type';
 import { map } from 'rxjs/operators';
+import { TodoItem } from '../todo-item/todo-item';
 
 @Component({
   selector: 'app-todos',
-  imports: [],
+  imports: [TodoItem],
   templateUrl: './todos.html',
   styleUrl: './todos.scss',
 })
