@@ -1,5 +1,9 @@
 <h2>Todo List</h2>
 
+@if (!todoItems().length) {
+  <p>Loading ...</p>
+}
+
 <div class="todo-container">
 
   <div class="todo-header">
